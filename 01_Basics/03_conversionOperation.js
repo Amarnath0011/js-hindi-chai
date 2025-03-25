@@ -5,7 +5,7 @@ let score = true;
 
 
 // console.log(typeof score);
-// console.log(typeof(score));
+// console.log(typeof(score)
 
 let valueInNumber = Number(score) //conversion of string into number 
 
@@ -21,7 +21,7 @@ console.log(valueInNumber) //this will give a NaN ie not a number
 // let isLoggedIn = 1;
 // let booleanIsLoggedIn= Boolean(isLoggedIn)
 
-// console.log(booleanIsLoggedIn) //true
+// console.log(booleanIsLoggedIn) //trueoe
 
 
 // let isLoggedIn = 0;
