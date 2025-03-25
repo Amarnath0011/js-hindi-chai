@@ -72,17 +72,18 @@ console.log(1+4+"6") //56 */
 
 let num1,num2,num3;
 num1=num2=num3=2+3;
-console.log(num1,num2,num3)
+// console.log(num1,num2,num3)
 
 let gameCounter=100;
 gameCounter++;
-console.log(gameCounter);
+// console.log(gameCounter);
 
 
 
 let gameCounter2=100;
 ++gameCounter;
-console.log(gameCounter2);
+// console.log(gameCounter2);
 
-//
+const z=3+5;
+console.log(z)
 
