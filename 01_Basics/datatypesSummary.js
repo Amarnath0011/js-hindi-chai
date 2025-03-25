@@ -74,3 +74,40 @@ console.log(typeof null)  /*this gives Object , It is one of the historical bug 
  The tag for objects was 000, and unfortunately, null was also represented internally as 000.
  The bug was never fixed due to backward compatibility.
  */                       
+
+//  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/* 
+                       Memory 
+        Stack (Primitive), Heap (Non-Primitive)
+*/
+ let myFriendName = "Mithun" // this will go to stack 
+ let anotherName = myFriendName;
+  anotherName = "udit pandat"
+ console.log(myFriendName)
+ console.log(anotherName)
+
+ let userOne = {
+    email : "amarnathkumar9305@gmail.com",
+    upi : "6453543@ybl"
+ }
+ let userTwo = userOne
+ userTwo.email="amarnathsigh"
+
+ console.log(userOne.email)
+ console.log(userTwo.email)
+ console.log(userOne)
+ console.log(userTwo)
+ /* MY UNDERSTANDING 
+
+    in stack memory when we assign the previous value to another value the 
+    only the copy of previous value is assigned to previous value 
+    the original value doesnot change like in above example myFriendName is Mithun 
+    is copied in another name .and then another name is change d to udit 
+    which will not change the original value of myFriendName 
+
+
+    while in non primitive the values of userOne stored in heap memory 
+    in non premitive the actual reference of value is copied.
+    like both objects in stack point to same memory in heap so it will 
+    change the original value 
+    */
