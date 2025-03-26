@@ -1,5 +1,5 @@
 "use strict";// treat all JS code as newer version
-// alert ("hello"); // have different syntax in node js , i will run in browser console 
+// alert ("hello"); // have different syntax in node js , it will run in browser console 
 
 console.log(20+
     5); //code readability should be high 
