@@ -67,3 +67,35 @@ console.log(Object.values(tinderUser))//this will give a array of all values
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))// it will check wether a data is present in tiderUser or not 
 
+// console.log(users)
+// console.log(regularUser)
+
+const course = {
+    courseName : "Js in Hindi",
+    price : "9999",
+    courseInstructor : "Amarnath"
+}
+//course.courseInstructor
+
+//******. This is destructuring of objects 
+// will be used in react js  */
+
+const  {courseInstructor : instructor}=course;
+
+console.log(instructor)
+
+//      CONCEPT OF APIs
+   
+
+// {                                        
+//     name: "amarnath",
+//     coursename: "js in hindi"        //json
+
+//     price: "free"
+// }
+
+[
+    {},
+    {},       //This is also a json
+    {}    
+]
