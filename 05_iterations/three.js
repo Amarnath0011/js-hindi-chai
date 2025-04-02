@@ -35,11 +35,11 @@ for(const [key,value] of map){
     console.log(key,':-' , value);
 }
 
-// const myObj = {
-//     game1 : "NFS",
-//     game2 : "BGMI",
-//     game3 : "valorant". //Object is not iterable
-// }
-// for (const element of myObj) {
-//     console.log(myObj)
-// }
+const myObj = {
+    game1 : "NFS",
+    game2 : "BGMI",
+    game3 : "valorant"
+ } //Object is not iterable}
+for (const element of myObj) {
+    console.log(myObj)//output: myObj is not iterable using this loop
+}
