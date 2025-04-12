@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events </title>
+</head>
+<body>
+    <h2>amazing Images</h2>
+    <div>
+    <ul id="images">
+        <li <img width="200px" id="first" src="https://www.pexels.com/photo/scenic-palm-tree-avenue-on-a-sunny-day-30694611/" alt="first"></li>
+    </ul>
+</div>
+</body>
+<script >
+    document.getElementById('owl').addEventListener('click',function(){
+        console.log(e);
+    },false) // false is default , so it is not important to write false
+
+    //type,timestamp,defaultPrevented(to change the default variable )
+    //target, toElement ,srcElement,currentTarget,
+    //clientX, clientY,screenX,screenY
+    //altkey, ctrlKey,shiftKey,keyCode
+
+
+    //Event propagation
+
+    // bubbling and capturing
+    // event propagation is bubbling up
+    document.getElementById('owl').addEventListener('click',function(){
+        console.log("clicked inside the ul");
+    },false) 
+
+    document.getElementById('owl').addEventListener('click',function(){
+        console.log("clicked inside the ul");
+    },true) // this is capturing propagation , it propagates from top to bottom
+</script>
+</html>
