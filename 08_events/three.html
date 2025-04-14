@@ -11,27 +11,16 @@
     <button id="stop">stop</button>
 </body>
 <script>
-    setInterval
-    const sayAmarnath = function(){
-        console.log('amarnath')
-    }
-    const changeText = function(){
-        document.querySelector('h1').innerText = 'Amarnath is changed'
-    }
-    const changeMe = setInterval(changeText, 2000)
-    document.querySelector('#start').addEventListener('click', function(){
-        changeMe
-        console.log('started')
-    })
-    document.querySelector('#stop').addEventListener('click', function(){
-        clearInterval(changeMe)
-        console.log('stopped')
-    })
-    document.querySelector('h1').addEventListener('click', function(){
-        console.log('clicked')
-    })
-    document.querySelector('h1').addEventListener('mouseover', function(){
-        console.log('mouse over')
-    })
-    </script>
+    const learnInterval = function(){
+        console.log("Amarnath",Date.now())}
+    let changing=''
+    
+document.querySelector('#start').addEventListener('click',function(){
+    changing = setInterval(learnInterval,2000)
+        // clearInterval(changing)
+})
+document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(changing)
+})
+</script>
 </html>
