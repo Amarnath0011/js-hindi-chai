@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+      
+    </div>
+    <button>Get</button>
+</body>
+<script >
+  
+  const requestUrl = 'https://api.github.com/users/Amarnath0011';
+    const xhr = new XMLHttpRequest();
+    let userData = null; // <- Declare globally
+
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        userData = JSON.parse(this.responseText);
+        console.log(typeof userData);
+        console.log(userData.followers);
+        console.log(userData.bio);
+      }
+    };
+    xhr.send();
+
+    const card = document.querySelector('.card');
+    const button = document.querySelector('button');
+
+    button.addEventListener('click', function () {
+      if (userData) {
+        card.innerHTML = `
+          <h3>${userData.name || userData.login}</h3>
+          <p><strong>Bio:</strong> ${userData.bio || "No bio available"}</p>
+          <p><strong>Followers:</strong> ${userData.followers}</p>
+        `;
+      } else {
+        card.innerHTML = "Loading or data not available.";
+      }
+    });
+</script>
+</html>
